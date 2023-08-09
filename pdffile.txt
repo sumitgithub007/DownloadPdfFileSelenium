@@ -1,0 +1,17 @@
+
+		   ChromeOptions options = new ChromeOptions();
+		   HashMap<String, Object> chromeOptionsMap = new HashMap<String, Object>();
+		       chromeOptionsMap.put("plugins.plugins_disabled", new String[] { "Chrome PDF Viewer" });
+		       chromeOptionsMap.put("plugins.always_open_pdf_externally", true);
+		       chromeOptionsMap.put("download.default_directory", "C:\\Users\\goyal\\OneDrive\\Desktop\\New folder\\ExcelReader\\");
+		       options.setExperimentalOption("prefs", chromeOptionsMap);
+		      // options.addArguments("--headless");
+		
+		   	WebDriver driver = new ChromeDriver(options);
+			
+			 driver.manage().window().maximize();
+			driver.get("https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf");
+			
+		       
+		       
+		       
